@@ -11,35 +11,38 @@
     <div id="myActionBtn" class="actionButton"><div class="inner"><i class="fa fa-reorder"></i></div></div>
 
     <pages>
-        <page class="page" index="1">
+        <page class="page" id="page1" index="1">
             <div class="mobile backdrop"></div>
-            <div class="mobile header">
-                this is my header
+
+            <div class="mobile greeting dismissActionMenu">
+                <b>Hi</b>, my <br>name is<br><b>{{user.first_name}}</b>
             </div>
+            <h2 class="mobile greeting2 dismissActionMenu">I want to work for you!</h2>
+
             <content class="">
-                <ng-action-menu id="myActionMenu" class="light" title="{{user.name}}" btn-toggle="#myActionBtn">
-                    <div icon="star" link="http://www.google.com" behavior="modal" color="#888" >Skill Set</div>
-                    <div icon="briefcase" link="http://www.google.com" behavior="modal" color="#888" >Experience</div>
-                    <div icon="book" link="http://www.google.com" behavior="modal" color="#888" >Education</div>
-                    <div icon="lightbulb-o" link="#link1" behavior="modal" color="#888">Interests</div>
-                    <div icon="trophy" link="#link2" behavior="modal" type="detached">Accomplishments</div>
-                    <div icon="envelope" link="#link3" behavior="modal">Contact</div>
+                <ng-action-menu id="myActionMenu" class="light" title="{{user.first_name+''+user.last_name}}" btn-toggle="#myActionBtn">
+                    <div icon="star" link="page2" behavior="page" color="#888" >Skill Set</div>
+                    <div icon="briefcase" link="page3" behavior="page" color="#888" >Experience</div>
+                    <div icon="book" link="page4" behavior="page" color="#888" >Education</div>
+                    <div icon="lightbulb-o" link="page5" behavior="page" color="#888">Interests</div>
+                    <div icon="trophy" link="page6" behavior="page" type="detached">Accomplishments</div>
+                    <div icon="envelope" link="page7" behavior="page">Contact</div>
                 </ng-action-menu>
             </content>
         </page>
 
-        <page class="page" index="2">
+        <page class="page" id="page2" index="2">
 
             <header>This is my Page 2</header>
             <content>this is my page 2 content</content>
         </page>
 
-        <page class="page" index="3">
+        <page class="page" id="page3" index="3">
             <header>This is my Page 3</header>
             <content>this is my page 3 content</content>
         </page>
 
-        <page class="page" index="4">
+        <page class="page" id="page4" index="4">
             <header>This is my Page 4</header>
             <content>this is my page 4 content</content>
         </page>

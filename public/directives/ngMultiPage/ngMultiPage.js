@@ -114,7 +114,6 @@ define(['angular', 'directives-module','bootstrap-3.2.0'], function(angular, dir
                             var index = $(this).attr("index");
 
                             var pos = (parseInt(index)-1)*100;
-                            console.log("POS",nav);
                             $(this).css("left",pos+"%");
 
                             // build navigation on header

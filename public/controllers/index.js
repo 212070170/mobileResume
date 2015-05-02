@@ -9,7 +9,8 @@ define(['angular',
     // Controller definition
     controllers.controller("indexCtrl", ["$scope", "$rootScope", function($scope, $rootScope) {
         $scope.user = {
-            name : "Fabio Almeida"
+            first_name : "Fabio",
+            last_name : "Almeida"
         }
 
         $scope.buttons=[{

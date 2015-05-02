@@ -47,12 +47,18 @@ define(['angular', 'directives-module','bootstrap-3.2.0'], function(angular, dir
 
                             var foreColor = $(this).attr("color") != "" && $(this).attr("color") != undefined && $(this).attr("color") != null ? "color:"+$(this).attr("color")+";" : "";
 
+                        if(bhvr == "page")
+                            var inner = "<a "+buildLink+" class='am pageToggle dismissActionMenu' dest='"+link+"' style='"+foreColor+""+bkg+"'><i class='fa fa-"+icon+"'></i><span class='amlabel'>"+text+"</span></a>";
+                        else
                             var inner = "<a "+buildLink+" class='am "+type+" dismissActionMenu' style='"+foreColor+""+bkg+"'><i class='fa fa-"+icon+"'></i><span class='amlabel'>"+text+"</span></a>";
-                            $(this).html(inner);;
+
+                            $(this).html(inner);
+
+
                         });
 
                         if(title != "" && title != null && title != undefined){
-                            var t = "<div class='am amTitle'>"+$scope.user.name+"</div>";
+                            var t = "<div class='am amTitle'>"+$scope.user.first_name +' '+$scope.user.last_name+"</div>";
                             $(".amMenu").html(t+$(".amMenu").html());
                         }
 
@@ -65,7 +71,15 @@ define(['angular', 'directives-module','bootstrap-3.2.0'], function(angular, dir
                             })
 
                         }
-                        $compile($("#"+id).contents());
+
+                        $(".pageToggle").each(function(){
+                            $(this).click(function(){
+                                var dest = $(this).attr("dest");
+                                var pos = $("#"+dest).position();
+                                $("#myMultiPage pages").css("left","-"+pos.left+"px");
+                                console.log(pos);
+                            })
+                        })
                         $scope.$on('$destroy', function () {
 
 
