@@ -1,0 +1,140 @@
+.am{
+    display:block;
+    clear:both;
+    padding:7px 7px 7px 10px;
+    opacity: 0.93;
+    filter: alpha(opacity=93); /* For IE8 and earlier */
+    text-align:center;
+}
+
+.am:hover{
+    text-decoration:none;
+
+}
+.am .fa{
+    font-size:4em;
+    display:inline-block;
+    padding:0.2em;
+    text-decoration:none;
+    margin-top:0.2em;
+}
+.am.amtitle{
+    font-size:3em;
+    padding:10px 0px 10px 0px;
+}
+.light .am.amTitle{
+    color:#555 !important;
+}
+.dark .am.amTitle{
+    color:#CCC !important;
+}
+.am .amlabel{
+    height:2.6em;
+    padding:0.5em 0px 10px 10px;;
+    display:inline-block;
+    font-size:3em;
+    vertical-align:top;
+
+}
+
+.am.detach{
+    margin-top:5px;
+    margin-bottom:5px;
+    border-radius:4px;
+}
+
+
+.amMenu > div:nth-of-type(1) .am {
+    border-radius:4px 4px 0px 0px;
+}
+
+.amMenu > div:last-of-type .am{
+    border-radius:0px 0px 4px 4px;
+}
+
+.amContainer{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    bottom:0px;
+    z-index:10000;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+.amContainer .amMenu{
+    position:relative;
+    bottom:-500px;
+    width:90%;
+    transition: all 0.3s ease;
+    -webkit-transition: bottom 0.3s ease;
+    -moz-transition: bottom 0.3s ease;
+    -ms-transition: bottom 0.3s ease;
+    -o-transition: bottom 0.3s ease;
+    height:0px;
+
+}
+
+.amContainer .amMenu.showActionPanel{
+    display:block;
+    top:auto;
+    bottom:5px;
+    height:auto;
+
+
+}
+
+.light .am{
+    color:#4985f1;
+    background-color:#DDD;
+    border-bottom:1px solid #999;
+    box-shadow: 1px 1px 2px #666;
+
+}
+.light .am:hover{
+    background-color:#EEE;
+}
+
+.dark .am{
+    color:#4985f1;
+    background-color:#444444;
+    border-bottom:1px solid #222222;
+    box-shadow: 1px 1px 2px #333;
+}
+.dark .am:hover{
+    background-color:#333333 !important;
+}
+
+.actionButton{
+    height:9em;
+    width:9em;
+    border-radius:100px;
+    background-color:transparent;
+    border:0.9em solid #FFF;
+    padding:1.1em;
+    position:absolute;
+    bottom:20px;
+    margin-left:auto;
+    margin-right:auto;
+    left:43%;
+    -webkit-filter: drop-shadow(2px 2px 5px rgba(0,0,0,.7));
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,.7));
+    z-index:1000;
+
+
+}
+
+.actionButton .inner{
+    height:5em;
+    width:5em;
+    border-radius:100px;
+    background-color:#FFF;
+    padding:1em;
+    text-align:center;
+}
+
+.actionButton .inner i{
+    font-size:3em;
+    font-weight:bold;
+}

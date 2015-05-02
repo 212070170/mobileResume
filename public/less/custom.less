@@ -1,0 +1,23 @@
+@color : #000;
+@headerBkgColor: #aa4c9f;
+.test{
+  background-color: @color !important;
+}
+
+.mobile{
+  &.backdrop{
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;
+    background-color:@headerBkgColor;
+    z-index:-1;
+    background-image: url('../../public/images/profile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &.header{
+    height:40%;
+  }
+}

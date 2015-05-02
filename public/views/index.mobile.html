@@ -1,0 +1,47 @@
+<style>
+    body,.container{
+        width:100% !important;
+        height:100% !important;
+        position:absolute;
+        top:0px;
+        left:0px;
+    }
+</style>
+<ng-multi-page id="myMultiPage" nav="true">
+    <div id="myActionBtn" class="actionButton"><div class="inner"><i class="fa fa-reorder"></i></div></div>
+
+    <pages>
+        <page class="page" index="1">
+            <div class="mobile backdrop"></div>
+            <div class="mobile header">
+                this is my header
+            </div>
+            <content class="">
+                <ng-action-menu id="myActionMenu" class="light" title="{{user.name}}" btn-toggle="#myActionBtn">
+                    <div icon="star" link="http://www.google.com" behavior="modal" color="#888" >Skill Set</div>
+                    <div icon="briefcase" link="http://www.google.com" behavior="modal" color="#888" >Experience</div>
+                    <div icon="book" link="http://www.google.com" behavior="modal" color="#888" >Education</div>
+                    <div icon="lightbulb-o" link="#link1" behavior="modal" color="#888">Interests</div>
+                    <div icon="trophy" link="#link2" behavior="modal" type="detached">Accomplishments</div>
+                    <div icon="envelope" link="#link3" behavior="modal">Contact</div>
+                </ng-action-menu>
+            </content>
+        </page>
+
+        <page class="page" index="2">
+
+            <header>This is my Page 2</header>
+            <content>this is my page 2 content</content>
+        </page>
+
+        <page class="page" index="3">
+            <header>This is my Page 3</header>
+            <content>this is my page 3 content</content>
+        </page>
+
+        <page class="page" index="4">
+            <header>This is my Page 4</header>
+            <content>this is my page 4 content</content>
+        </page>
+    </pages>
+</ng-multi-page>
