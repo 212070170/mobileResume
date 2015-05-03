@@ -1,0 +1,15 @@
+EXECUTES A METHOD WHEN THE NG-REPEAT IS DONE ITERATING THROUGH THE RECORDS
+THIS SI AN EVENT EMMITER LISTENER RELATIONSHIP AND NOT A DIRECT METHOD CALL
+
+        <div ng-repeat="item in data" class="myTile" on-finish-render="bindClick">
+
+
+
+        $scope.$on('bindClick', function(ngRepeatFinishedEvent) {
+            console.log($("p"));
+            console.log("done");
+            console.log("inside bindClick");
+            $(".myTile").click(function(){$("#myActionMenu .amMenu").toggleClass("showActionPanel");});
+        });
+
+
