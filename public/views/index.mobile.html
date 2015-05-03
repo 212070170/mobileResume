@@ -33,17 +33,54 @@
 
         <page class="page" id="page2" index="2">
 
-            <header>This is my Page 2</header>
-            <content>this is my page 2 content</content>
+            <header>Skill Set</header>
+            <content>
+                <div ng-repeat="skill in user.skillSet" on-finish-render="bindModal">
+                    <div  class="skills menuItem" id="skill{{$index}}" on-finish-render="bindModal">
+                        {{skill.title}}
+                    </div>
+                    <ng-mobile-modal id="myMobileModal{{$index}}" triggered-by="skill{{$index}}" class="mobileModal">
+                        <h1>{{skill.title}}</h1>
+                        <p>{{skill.description}}</p>
+                    </ng-mobile-modal>
+                </div>
+            </content>
         </page>
 
         <page class="page" id="page3" index="3">
-            <header>This is my Page 3</header>
-            <content>this is my page 3 content</content>
+            <header>Experience</header>
+            <div ng-repeat="exp in user.experience" on-finish-render="bindModal">
+                <div  class="menuItem experience" id="exp{{$index}}">
+                    <div>{{exp.company}}</div>
+                    <div class="subtitle1">{{exp.job}}</div>
+                    <div class="subtitle1">{{exp.start}} - {{exp.end}}</div>
+                </div>
+                <ng-mobile-modal id="myMobileModal{{$index}}" triggered-by="exp{{$index}}" class="mobileModal">
+                    <h1>{{exp.company}}</h1>
+                    <h2>{{exp.job}}</h2>
+                    <h2>{{exp.start}} - {{exp.end}}</h2>
+                    <p>{{exp.description}}</p>
+                </ng-mobile-modal>
+            </div>
         </page>
 
         <page class="page" id="page4" index="4">
-            <header>This is my Page 4</header>
+            <header>Education</header>
+            <content>this is my page 4 content</content>
+        </page>
+
+        <page class="page" id="page5" index="5">
+            <header>Interests</header>
+            <content>this is my page 4 content</content>
+        </page>
+
+        <page class="page" id="page6" index="6">
+            <header>Accomplishments</header>
+            <content>this is my page 4 content</content>
+        </page>
+
+        <page class="page" id="page7" index="7">
+            <header>Contact</header>
             <content>this is my page 4 content</content>
         </page>
     </pages>

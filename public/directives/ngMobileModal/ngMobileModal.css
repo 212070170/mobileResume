@@ -14,8 +14,17 @@
     -o-transition: opacity 0.7s ease;
     visibility: hidden;
     z-index:10000;
+    color:#FFF;
+    font-size:4em;
+    padding:1em;
 
 }
+.ngMobileModal h1 {
+    font-size: 2em;
+    color:darkorange;
+    margin-bottom:1em;
+}
+
 .ngMobileModal.show{
     visibility: visible;
     opacity: 0.9;
@@ -23,18 +32,18 @@
 }
 
 .closeMobileModal{
-    width:30px;
-    height:30px;
     text-align:center;
     color:red;
     vertical-align:middle;
-    padding:3px;
+    padding:0.1em 0.4em;
     font-weight:bold;
     position:fixed;
     right:10px;
     top:10px;
     border-radius:4px;
-    border:2px solid red;z-index:10001;
+    border:3px solid red;
+    z-index:10001;
+    font-size:0.8em;
 }
 .ngMobileModal .header, .ngMobileModal .footer, .ngMobileModal .body{
     width:100%;

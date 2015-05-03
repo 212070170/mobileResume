@@ -1,5 +1,14 @@
 @color : #000;
 @headerBkgColor: #aa4c9f;
+
+.verticalAlign() {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .test{
   background-color: @color !important;
 }
@@ -42,5 +51,35 @@
     -webkit-filter: drop-shadow(2px 3px 5px rgba(255,255,255,.9));
     filter: drop-shadow(2px 3px 5px rgba(255,255,255,.9));
     font-weight:bold;
+  }
+
+}
+.menuItem {
+  position:relative;
+  font-size: 4em;
+  border-bottom: 1px solid #CCC;
+  padding: 0.6em;
+  &:after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+    color: #DDD;
+    .verticalAlign();
+
+  }
+  &.experience {
+    div{margin-left: 65px;}
+    &:before {
+      font-family: FontAwesome;
+      content: "\f0f7";
+      .verticalAlign();
+      left:10px;
+      color: #DDD;
+      font-size:1.5em;
+    }
+  }
+  .subtitle1{
+    font-size:0.8em;
   }
 }

@@ -1,5 +1,5 @@
 /*global define */
-define(['angular', 'directives-module','bootstrap'], function(angular, directives) {
+define(['angular', 'directives-module','bootstrap-3.2.0'], function(angular, directives) {
     'use strict';
 
     /* Directives  */
@@ -8,6 +8,7 @@ define(['angular', 'directives-module','bootstrap'], function(angular, directive
         '$timeout',
         function($timeout) {
             return {
+                priority:2001,
                 restrict: 'E',
                 replace: true,
                 require: '?ngModel',
@@ -19,18 +20,11 @@ define(['angular', 'directives-module','bootstrap'], function(angular, directive
                     '</div>',
 
                 compile: function (element, attr) {
-
                     var id = attr.id;
+                    console.log("ID",id);
                     var trigger = attr.triggeredBy;
 
                     return function ($scope, $element, $attr) {
-                         $(".closeMobileModal").click(function(){
-                             $(".ngMobileModal").removeClass("show");
-                         });
-                        $(trigger).click(function(){
-                            $("#"+id).addClass("show");
-                        });
-
                         //$scope.$apply();
                         $scope.$on('$destroy', function () {
 

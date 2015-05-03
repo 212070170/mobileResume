@@ -31,23 +31,25 @@
     width:100%;
 }
 .ngMultiPage page header{
-    position:absolute;
     top:0px;
     left:0px;
     height:2em;
     width:100%;
     padding:8px 5px 5px 5px;
-    background-color:#005cb9;
+    background-color:#FFF;
     text-align:center;
-    color:#FFF;
-    font-size:4em;
+    color:#666;
+    font-size:6em;
+    border-bottom:1px solid #EEE;
+    -webkit-filter: drop-shadow(0px 2px 10px rgba(0,0,0,.6));
+    filter: drop-shadow(0px 2px 10px rgba(0,0,0,.6));
 }
 
 
 .ngMultiPage page header .previousPage,.ngMultiPage page header .nextPage{
     height:auto;
     margin:0px !important;
-    color:#FFFFFF;
+    color:#EEEEEE;
     padding:0px 4px;
     background-color:transparent;
     margin-top: 0.2em !important;
